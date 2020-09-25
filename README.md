@@ -1,4 +1,4 @@
-# A starter webpack project for React
+# Moto Web App
 
 This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
 
