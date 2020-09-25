@@ -1,43 +1,50 @@
 # Moto Web App
 
+This is a functional prototype. 
+
 ## Client-side details
 
 ### Global state
 
 ```js
 {
-  auth:
-  message: "...",
-  plans: [{},{}]
-  recipes: [{},{}],
-  selectedDay: integer,
-  selectedRecipe: id
-  planNeedsFetching: bool
-  shoppingList: [{},{}]
+selectedDate:"",
+numberOfGuests: 0,
+hours:0,
 }
 ```
 
-### Local states
+###### Local states
 
+### Landing Page Component
 ```js
-// AddIngredients
+// Setting up Criteria for booking on Landing Page
 {
-  ingredients: [
-      {name:"", unit:""}
-  ]
+userCriteria:{
+ selectedDate: "",
+ numberOfGuests: 0,
+ hours:0
 }
+}
+```
 
-// AddRecipe
+### Booking Page Component
+```js
+
+// Booking Component
 {
   name: '',
   image: '',
   method: '',
 }
 
+```
+```js
 // Landing
 {
-  componentView: "Sign in"
+  
 }
+
 
 // Register
 {
@@ -83,28 +90,11 @@
 
 | type      | data         | purpose                                |
 | --------- | ------------ | -------------------------------------- |
-| SET_DAY   | selected_day | set specific day to add recipe to      |
+| SET_DAY   | selected_day | set specific date chosen by user     |
 | CLEAR_DAY |              | set selected day to Null (initialSate) |
 
-#### recipes
 
-| type | data | purpose |
-| --- | --- | --- |
-| saveRecipe | recipe | save the recipe to DB and then return all recipes and store in redux - thunk action |
-| fetchRecipes | recipes | retreive recipes from db and store in redux - thunk action |
-| SET_RECIPES | recipe | save recipes to store |
 
-#### recipe
 
-| type | data | purpose |
-| --- | --- | --- |
-| fetchSelectedRecipe | recipeId | retreive recipe from db and store in redux - thunk action |
-| SET_SELECTED_RECIPE | recipeId | save recipe to store |
 
-#### shopping list
-
-| type     | data         | purpose                                    |
-| -------- | ------------ | ------------------------------------------ |
-| GET_LIST | planId       | retreive recipe from db and store in redux |
-| SET_LIST | shoppingList | save recipe to store                       |
 
