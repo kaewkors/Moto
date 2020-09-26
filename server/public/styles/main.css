@@ -1,0 +1,15 @@
+*{
+padding: 0;
+margin:0
+}
+
+
+#search-bar-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top : 50%;
+  left:10%;
+  border: 2px solid  black ;
+}

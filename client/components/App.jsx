@@ -1,12 +1,12 @@
 import React from 'react'
-import SeletectDatePicker from './LandingPage'
+import SearchBar from './LandingPage'
 
 const App = () => {
   return (
     <>
     <h1>MOTE</h1>
     
-      <SeletectDatePicker />
+      <SearchBar />
      </>
   )
 }

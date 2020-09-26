@@ -59,17 +59,10 @@ const names = [
 
 const guests = [1, 2, 3, 4, 5]
 
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  }
-}
 
 
-export default function SeletectDatePicker() {
+
+export default function SerachBar() {
   const classes = useStyles();
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
@@ -78,17 +71,7 @@ export default function SeletectDatePicker() {
     setPersonName(event.target.value);
   };
 
-  const handleChangeMultiple = (event) => {
-    const { options } = event.target;
-    const value = [];
-    for (let i = 0, l = options.length; i < l; i += 1) {
-      if (options[i].selected) {
-        value.push(options[i].value);
-      }
-    }
-    setPersonName(value);
-  };
-    
+
       const [selectedDate, setSelectedDate] = React.useState(
         new Date("2014-08-18T21:11:54")
       )
@@ -99,13 +82,12 @@ export default function SeletectDatePicker() {
 
 
     return (
-      <div>
+      <div id= "search-bar-container">
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-mutiple-name-label">Where</InputLabel>
           <Select
             labelId="demo-mutiple-name-label"
             id="demo-mutiple-name"
-            multiple
             value={personName}
             onChange={handleChange}
             input={<Input />}
@@ -115,7 +97,7 @@ export default function SeletectDatePicker() {
               <MenuItem
                 key={name}
                 value={name}
-                style={getStyles(name, personName, theme)}
+                // style={getStyles(name, personName, theme)}
               >
                 {name}
               </MenuItem>
@@ -127,7 +109,7 @@ export default function SeletectDatePicker() {
               <Select
                 labelId="demo-mutiple-name-label"
                 id="demo-mutiple-name"
-                multiple
+
                 value={personName}
                 onChange={handleChange}
                 input={<Input />}
@@ -137,7 +119,7 @@ export default function SeletectDatePicker() {
                   <MenuItem
                     key={guest}
                     value={guest}
-                    style={getStyles(guest, personName, theme)}
+                    // style={getStyles(guest, personName, theme)}
                   >
                     {guest}
                   </MenuItem>
@@ -158,11 +140,11 @@ export default function SeletectDatePicker() {
               "aria-label": "change date",
             }}
           />
-        </MuiPickersUtilsProvider>
-
         <Button variant="contained" color="primary" href="#contained-buttons">
           Go
         </Button>
+        </MuiPickersUtilsProvider>
+
       </div>
     )
 }
