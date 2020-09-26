@@ -1,12 +1,12 @@
 import React from 'react'
-import Test from './LandingPage'
+import SeletectDatePicker from './LandingPage'
 
 const App = () => {
   return (
     <>
-    <h1>React development has begun!</h1>
+    <h1>MOTE</h1>
     
-      <Test />
+      <SeletectDatePicker />
      </>
   )
 }
