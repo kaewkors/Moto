@@ -1,12 +1,18 @@
 import React from 'react'
 import SearchBar from './LandingPage'
+import {
+  ThemeProvider,
+  createMuiTheme,
+} from "@material-ui/core/styles"
 
+import theme from '../theme/defaultTheme'
 const App = () => {
+  
   return (
     <>
-      
-    <h1>MOTE</h1>
-     <SearchBar />
+      <ThemeProvider theme={theme} >
+         <SearchBar/>
+        </ThemeProvider>
     </>
   )
 }

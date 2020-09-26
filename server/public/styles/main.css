@@ -17,8 +17,8 @@ margin:0
   position: absolute;
   background-color: white;
   top : 50%;
-  left:10%;
-  /* border: 2px solid  black ; */
+  transform: translateX(45%);
+  -webkit-transform:translateX(45%);
   border-radius:38px;
   width:50%;
 }
