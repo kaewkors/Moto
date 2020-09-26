@@ -4,10 +4,10 @@ import SearchBar from './LandingPage'
 const App = () => {
   return (
     <>
+      
     <h1>MOTE</h1>
-    
-      <SearchBar />
-     </>
+     <SearchBar />
+    </>
   )
 }
 

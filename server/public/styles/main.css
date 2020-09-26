@@ -3,13 +3,23 @@ padding: 0;
 margin:0
 }
 
+#background-landing-page{
+  height:100vh;
+  width:100vw;  
+  background-color: #FFD966; 
+}
+
 
 #search-bar-container{
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
+  background-color: white;
   top : 50%;
   left:10%;
-  border: 2px solid  black ;
+  /* border: 2px solid  black ; */
+  border-radius:38px;
+  width:50%;
 }
+

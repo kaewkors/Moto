@@ -73,7 +73,7 @@ export default function SerachBar() {
 
 
       const [selectedDate, setSelectedDate] = React.useState(
-        new Date("2014-08-18T21:11:54")
+        // new Date("2014-08-18T21:11:54")
       )
 
       const handleDateChange = (date) => {
@@ -82,6 +82,7 @@ export default function SerachBar() {
 
 
     return (
+      <div id="background-landing-page"> 
       <div id= "search-bar-container">
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-mutiple-name-label">Where</InputLabel>
@@ -145,7 +146,8 @@ export default function SerachBar() {
         </Button>
         </MuiPickersUtilsProvider>
 
-      </div>
+            </div>
+            </div>
     )
 }
 
